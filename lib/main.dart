@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:seif_portofolio/features/home/presentation/screens/home_screen.dart';
+import 'package:seif_portofolio/core/ui/app_theme.dart';
+import 'package:seif_portofolio/presentation/screens/home_screen.dart';
 
 void main() {
-  runApp(const SeifPortofolioApp());
+  runApp(const PortofolioApp());
 }
 
-class SeifPortofolioApp extends StatelessWidget {
-  const SeifPortofolioApp({super.key});
+class PortofolioApp extends StatelessWidget {
+  const PortofolioApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
+      theme: appTheme,
     );
   }
 }
