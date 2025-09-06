@@ -28,4 +28,18 @@ abstract class AppValues {
   static const double lineHeightBody1TabletMobile = 24.0;
   static const double lineHeightBody2 = 24.0;
   static const double lineHeightBody3 = 20.0;
+
+  // Paddings
+  static const double paddingHorizontalMobile = 12.0;
+  static const double paddingVerticalMobile = 64.0;
+
+  static const double paddingHorizontalDesktop = 80.0;
+  static const double paddingVerticalDesktop = 96.0;
+
+  static const double paddingMedium = 16.0;
+  static const double paddingLarge = 32.0;
+
+  // Breakpoints
+  static const double tabletBreakpoint = 768;
+  static const double desktopBreakpoint = 1024;
 }

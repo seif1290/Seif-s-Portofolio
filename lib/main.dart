@@ -14,7 +14,7 @@ class PortofolioApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
-      theme: appTheme,
+      theme: appTheme(context),
     );
   }
 }

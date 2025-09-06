@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seif_portofolio/core/ui/app_values.dart';
+import 'package:seif_portofolio/core/constants/app_values.dart';
+import 'package:seif_portofolio/core/ui/app_colors.dart';
 
 TextTheme get desktopTextTheme => TextTheme(
   headlineLarge: TextStyle(
@@ -25,7 +26,7 @@ TextTheme get desktopTextTheme => TextTheme(
   ),
   labelLarge: TextStyle(
     fontSize: AppValues.fontSizeBody1Desktop,
-    fontWeight: FontWeight.w600,
+    color: AppColors.grey600,
     height: AppValues.lineHeightBody1Desktop / AppValues.fontSizeBody1Desktop,
   ),
   labelMedium: TextStyle(
@@ -42,9 +43,9 @@ TextTheme get desktopTextTheme => TextTheme(
 
 TextTheme get tabletMobileTextTheme => TextTheme(
   headlineLarge: TextStyle(
-    fontSize: AppValues.fontSizeH1Tablet,
+    fontSize: AppValues.fontSizeH1Mobile,
     fontWeight: FontWeight.w700,
-    height: AppValues.lineHeightH1Tablet / AppValues.fontSizeH1Tablet,
+    height: AppValues.lineHeightH1Mobile / AppValues.fontSizeH1Mobile,
   ),
   headlineMedium: TextStyle(
     fontSize: AppValues.fontSizeH2TabletMobile,
@@ -67,10 +68,10 @@ TextTheme get tabletMobileTextTheme => TextTheme(
   ),
   labelLarge: TextStyle(
     fontSize: AppValues.fontSizeBody1TabletMobile,
-    fontWeight: FontWeight.w600,
     height:
         AppValues.lineHeightBody1TabletMobile /
         AppValues.fontSizeBody1TabletMobile,
+    color: AppColors.grey600,
   ),
   labelMedium: TextStyle(
     fontSize: AppValues.fontSizeBody2,
