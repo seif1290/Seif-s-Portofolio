@@ -5,6 +5,8 @@ import 'package:seif_portofolio/core/constants/desktop_app_bar_actions.dart';
 import 'package:seif_portofolio/core/ui/responsive_layout.dart';
 import 'package:seif_portofolio/presentation/screens/introduction_section/introduction_section_desktop.dart';
 import 'package:seif_portofolio/presentation/screens/introduction_section/introduction_section_mobile.dart';
+import 'package:seif_portofolio/presentation/screens/main_section/main_section_desktop.dart';
+import 'package:seif_portofolio/presentation/screens/main_section/main_section_mobile.dart';
 import 'package:seif_portofolio/presentation/widgets/mobile_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -30,23 +32,39 @@ class HomeScreen extends StatelessWidget {
             : null,
 
         body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: AppValues.paddingVerticalMobile,
-              horizontal: AppValues.paddingHorizontalMobile,
-            ),
-            child: Column(
-              children: [
-                ResponsiveLayout(
-                  mobile: IntroductionSectionMobile(),
-                  tablet: IntroductionSectionMobile(),
-                  desktop: IntroductionSectionDesktop(),
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                padding: screenMainPadding(),
+                color: Theme.of(context).colorScheme.primary,
+                child: const ResponsiveLayout(
+                  mobile: MainSectionMobile(),
+                  tablet: MainSectionMobile(),
+                  desktop: MainSectionDesktop(),
                 ),
-              ],
-            ),
+              ),
+              Container(
+                width: double.infinity,
+                padding: screenMainPadding(),
+                color: Theme.of(context).colorScheme.secondary,
+                child: ResponsiveLayout(
+                  mobile: const IntroductionSectionMobile(),
+                  tablet: const IntroductionSectionMobile(),
+                  desktop: const IntroductionSectionDesktop(),
+                ),
+              ),
+            ],
           ),
         ),
       ),
+    );
+  }
+
+  EdgeInsets screenMainPadding() {
+    return const EdgeInsets.symmetric(
+      vertical: AppValues.paddingVerticalMobile,
+      horizontal: AppValues.paddingHorizontalMobile,
     );
   }
 }

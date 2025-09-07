@@ -36,8 +36,13 @@ abstract class AppValues {
   static const double paddingHorizontalDesktop = 80.0;
   static const double paddingVerticalDesktop = 96.0;
 
+  static const double paddingSmall = 8.0;
   static const double paddingMedium = 16.0;
   static const double paddingLarge = 32.0;
+
+  static const double cardRadiusSmall = 12.0;
+  static const double cardRadiusMedium = 16.0;
+  static const double cardRadiusLarge = 24.0;
 
   // Breakpoints
   static const double tabletBreakpoint = 768;

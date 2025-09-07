@@ -12,6 +12,7 @@ class MobileDrawer extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.7,
       padding: EdgeInsets.only(top: AppValues.paddingMedium),
       child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.primary,
         appBar: AppBar(
           title: Text(
             AppStrings.fullName,

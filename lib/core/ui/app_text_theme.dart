@@ -31,12 +31,10 @@ TextTheme get desktopTextTheme => TextTheme(
   ),
   labelMedium: TextStyle(
     fontSize: AppValues.fontSizeBody2,
-    fontWeight: FontWeight.w600,
     height: AppValues.lineHeightBody2 / AppValues.fontSizeBody2,
   ),
   labelSmall: TextStyle(
     fontSize: AppValues.fontSizeBody3,
-    fontWeight: FontWeight.w600,
     height: AppValues.lineHeightBody3 / AppValues.fontSizeBody3,
   ),
 );
@@ -75,12 +73,10 @@ TextTheme get tabletMobileTextTheme => TextTheme(
   ),
   labelMedium: TextStyle(
     fontSize: AppValues.fontSizeBody2,
-    fontWeight: FontWeight.w600,
     height: AppValues.lineHeightBody2 / AppValues.fontSizeBody2,
   ),
   labelSmall: TextStyle(
     fontSize: AppValues.fontSizeBody3,
-    fontWeight: FontWeight.w600,
     height: AppValues.lineHeightBody3 / AppValues.fontSizeBody3,
   ),
 );

@@ -12,10 +12,8 @@ ThemeData appTheme(BuildContext context) {
   return ThemeData(
     useMaterial3: true,
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: AppColors.defaultGrey,
     textTheme: textTheme,
     colorScheme: const ColorScheme.dark().copyWith(
-      surface: AppColors.defaultGrey,
       primary: AppColors.defaultGrey,
       secondary: AppColors.grey50,
       primaryContainer: AppColors.grey100,
@@ -30,7 +28,6 @@ ThemeData appTheme(BuildContext context) {
     fontFamily: GoogleFonts.inter().fontFamily,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.defaultGrey,
-
       titleTextStyle: GoogleFonts.inter(
         fontWeight: FontWeight.bold,
         textStyle: Theme.of(context).textTheme.headlineLarge,
