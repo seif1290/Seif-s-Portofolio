@@ -20,9 +20,9 @@ TextTheme get desktopTextTheme => TextTheme(
   ),
   titleLarge: TextStyle(
     fontSize: AppValues.fontSizeSubtitleDesktop,
-    fontWeight: FontWeight.w600,
     height:
         AppValues.lineHeightSubtitleDesktop / AppValues.fontSizeSubtitleDesktop,
+    color: AppColors.grey600,
   ),
   labelLarge: TextStyle(
     fontSize: AppValues.fontSizeBody1Desktop,
@@ -59,10 +59,10 @@ TextTheme get tabletMobileTextTheme => TextTheme(
   ),
   titleLarge: TextStyle(
     fontSize: AppValues.fontSizeSubtitleTabletMobile,
-    fontWeight: FontWeight.w600,
     height:
         AppValues.lineHeightSubtitleTabletMobile /
         AppValues.fontSizeSubtitleTabletMobile,
+    color: AppColors.grey600,
   ),
   labelLarge: TextStyle(
     fontSize: AppValues.fontSizeBody1TabletMobile,

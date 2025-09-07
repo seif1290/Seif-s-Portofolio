@@ -3,10 +3,12 @@ import 'package:seif_portofolio/core/constants/app_strings.dart';
 import 'package:seif_portofolio/core/constants/app_values.dart';
 import 'package:seif_portofolio/core/constants/desktop_app_bar_actions.dart';
 import 'package:seif_portofolio/core/ui/responsive_layout.dart';
+import 'package:seif_portofolio/data/data_source/skills_data_source.dart';
 import 'package:seif_portofolio/presentation/sections/introduction_section/introduction_section_desktop.dart';
 import 'package:seif_portofolio/presentation/sections/introduction_section/introduction_section_mobile.dart';
 import 'package:seif_portofolio/presentation/sections/main_section/main_section_desktop.dart';
 import 'package:seif_portofolio/presentation/sections/main_section/main_section_mobile.dart';
+import 'package:seif_portofolio/presentation/sections/skills_section.dart';
 import 'package:seif_portofolio/presentation/widgets/mobile_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -58,11 +60,7 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.primary,
-                child: const ResponsiveLayout(
-                  mobile: MainSectionMobile(),
-                  tablet: MainSectionMobile(),
-                  desktop: MainSectionDesktop(),
-                ),
+                child: SkillsSection(skills: SkillsDataSource.getSkills),
               ),
             ],
           ),

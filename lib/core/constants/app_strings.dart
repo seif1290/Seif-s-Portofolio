@@ -12,4 +12,7 @@ abstract class AppStrings {
 
   static const String aboutMeDetails =
       'I began my journey as a web developer in 2015, and since then, I\'ve continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my web development journey, I\'m building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.';
+
+  static const String skillsIamGoodAt =
+      'The skills, tools and technologies I am really good at:';
 }
