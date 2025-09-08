@@ -2,6 +2,7 @@ abstract class AppStrings {
   static const String contact = 'Contact';
   static const String projects = 'Projects';
   static const String skills = 'Skills';
+  static const String work = 'Work';
   static const String welcomingAndName = 'Hi, Iam $firstName';
   static const String firstName = 'Seif';
   static const String fullName = 'Seif Alnawawy';
@@ -11,8 +12,11 @@ abstract class AppStrings {
   static const String aboutMe = 'About Me';
 
   static const String aboutMeDetails =
-      'I began my journey as a web developer in 2015, and since then, I\'ve continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my web development journey, I\'m building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.';
+      'As a passionate and ambitious Flutter developer with +1 years of experience in building and deploying mobile applications, including a published app on the Google Play Store, I’m excited to contribute my skills and take on new challenges in mobile app development';
 
   static const String skillsIamGoodAt =
       'The skills, tools and technologies I am really good at:';
+
+  static const String noteworthyProjects =
+      'Some of the noteworthy projects I have built:';
 }

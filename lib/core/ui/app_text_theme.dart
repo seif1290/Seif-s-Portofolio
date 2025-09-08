@@ -74,6 +74,7 @@ TextTheme get tabletMobileTextTheme => TextTheme(
   labelMedium: TextStyle(
     fontSize: AppValues.fontSizeBody2,
     height: AppValues.lineHeightBody2 / AppValues.fontSizeBody2,
+    color: AppColors.grey600,
   ),
   labelSmall: TextStyle(
     fontSize: AppValues.fontSizeBody3,

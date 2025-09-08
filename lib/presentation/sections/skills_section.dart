@@ -15,24 +15,26 @@ class SkillsSection extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         RoundedCard(text: AppStrings.skills),
+        const SizedBox(height: AppValues.paddingMedium),
+
         Text(
           AppStrings.skillsIamGoodAt,
           style: Theme.of(context).textTheme.titleLarge,
           textAlign: TextAlign.center,
           overflow: TextOverflow.ellipsis,
         ),
-        SingleChildScrollView(
-          child: Wrap(
-            spacing: AppValues.paddingLarge,
-            children: skills
-                .map(
-                  (skill) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: BuildSkill(skill: skill),
-                  ),
-                )
-                .toList(),
-          ),
+        const SizedBox(height: AppValues.paddingMedium),
+
+        Wrap(
+          spacing: AppValues.paddingLarge,
+          children: skills
+              .map(
+                (skill) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: BuildSkill(skill: skill),
+                ),
+              )
+              .toList(),
         ),
       ],
     );
