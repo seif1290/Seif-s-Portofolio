@@ -18,7 +18,10 @@ class IntroductionSectionDesktop extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: const PersonalImagePart(image: AppImages.personalImage2),
+              child: PersonalImagePart(
+                image: AppImages.personalImage2,
+                backgroundColor: Theme.of(context).colorScheme.secondary,
+              ),
             ),
             Expanded(
               child: Text(

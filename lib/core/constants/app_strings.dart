@@ -5,11 +5,12 @@ abstract class AppStrings {
       'https://www.linkedin.com/in/seifelnawawy';
   static const String githubProfileLink = 'https://github.com/seif1290';
 
-  static const String contact = 'Contact';
+  static const String home = 'Home  ';
+  static const String contacts = 'Contacts';
   static const String getInTouch = 'Get In Touch';
   static const String projects = 'Projects';
+  static const String education = 'Education';
   static const String skills = 'Skills';
-  static const String work = 'Work';
   static const String welcomingAndName = 'Hi, Iam $firstName';
   static const String firstName = 'Seif';
   static const String fullName = 'Seif Alnawawy';
@@ -19,7 +20,31 @@ abstract class AppStrings {
   static const String aboutMe = 'About Me';
 
   static const String aboutMeDetails =
-      'As a passionate and ambitious Flutter developer with +1 years of experience in building and deploying mobile applications, including a published app on the Google Play Store, I’m excited to contribute my skills and take on new challenges in mobile app development';
+      '''Hello, I’m a Mobile Applications Developer with experience in building Android and iOS apps using Flutter & Dart, as well as developing native Android applications with Kotlin.
+
+I provide end-to-end solutions – from idea to publishing the app on the stores – with a strong focus on high performance and seamless user experience.
+
+What I can do for you:
+
+Develop Android & iOS applications using Flutter & Dart.
+
+Build native Android applications using Kotlin & Jetpack Compose.
+
+Integrate apps with Firebase services (Authentication, Firestore, Storage, Notifications).
+
+Manage app state professionally with BLoC or GetX.
+
+Design and implement apps following Clean Architecture & MVVM for scalable and maintainable code.
+
+Connect applications to RESTful APIs and work with local databases (Sqflite, SharedPreferences, Hive).
+
+Create Responsive/Adaptive UIs that work smoothly across all devices.
+
+Convert websites into mobile applications with a professional approach.
+
+Publish applications on Google Play and handle all necessary requirements.
+
+I’d be glad to work with you on your next project and turn your idea into a successful mobile application😉.''';
 
   static const String skillsIamGoodAt =
       'The skills, tools and technologies I am really good at:';

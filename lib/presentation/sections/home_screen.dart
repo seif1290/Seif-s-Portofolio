@@ -15,8 +15,25 @@ import 'package:seif_portofolio/presentation/sections/skills_section.dart';
 import 'package:seif_portofolio/presentation/sections/projects_section.dart';
 import 'package:seif_portofolio/presentation/widgets/mobile_drawer.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  late ScrollController scrollController;
+  late List<GlobalKey> navbarKeys;
+  @override
+  void initState() {
+    super.initState();
+    scrollController = ScrollController();
+    navbarKeys = List.generate(
+      desktopAppBarActions.length,
+      (index) => GlobalKey(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,16 +48,31 @@ class HomeScreen extends StatelessWidget {
           ),
           actions: ResponsiveLayout.isMobile(context)
               ? null
-              : desktopAppBarActions,
+              : List.generate(
+                  desktopAppBarActions.length,
+                  (index) => TextButton(
+                    onPressed: () {
+                      _scrollToSection(index);
+                    },
+                    child: Text(desktopAppBarActions[index]),
+                  ),
+                ),
         ),
         endDrawer: ResponsiveLayout.isMobile(context)
-            ? const MobileDrawer()
+            ? MobileDrawer(
+                onDrawerSectionRowTap: (index) {
+                  Navigator.of(context).pop();
+                  _scrollToSection(index);
+                },
+              )
             : null,
 
         body: SingleChildScrollView(
+          controller: scrollController,
           child: Column(
             children: [
               Container(
+                key: navbarKeys.first,
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.primary,
@@ -51,6 +83,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Container(
+                key: navbarKeys[1],
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.secondary,
@@ -61,12 +94,14 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Container(
+                key: navbarKeys[2],
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.primary,
                 child: SkillsSection(skills: SkillsDataSource.getSkills),
               ),
               Container(
+                key: navbarKeys[3],
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.secondary,
@@ -75,12 +110,14 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Container(
+                key: navbarKeys[4],
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.primary,
                 child: EducationSection(),
               ),
               Container(
+                key: navbarKeys[5],
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.secondary,
@@ -97,6 +134,15 @@ class HomeScreen extends StatelessWidget {
     return const EdgeInsets.symmetric(
       vertical: AppValues.paddingVerticalMobile,
       horizontal: AppValues.paddingHorizontalMobile,
+    );
+  }
+
+  void _scrollToSection(int index) {
+    final key = navbarKeys[index];
+    Scrollable.ensureVisible(
+      key.currentContext!,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeInOut,
     );
   }
 }

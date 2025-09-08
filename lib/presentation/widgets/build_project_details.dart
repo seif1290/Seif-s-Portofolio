@@ -19,10 +19,9 @@ class BuildProjectDetails extends StatelessWidget {
         children: [
           Text(
             project.name,
-            style: Theme.of(context).textTheme.titleLarge!.copyWith(
-              color: AppColors.white,
-              fontWeight: FontWeight.w500,
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.headlineSmall!.copyWith(color: AppColors.white),
           ),
           const SizedBox(height: 24.0),
           Text(
@@ -39,9 +38,9 @@ class BuildProjectDetails extends StatelessWidget {
           IconButton(
             onPressed: () async {
               if (!await launchUrl(url) && !context.mounted) {
-                ScaffoldMessenger.of(
-                  context,
-                ).showSnackBar(SnackBar(content: Text('csddcs')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Unable to open link now')),
+                );
               }
             },
             icon: const Icon(Icons.open_in_new),

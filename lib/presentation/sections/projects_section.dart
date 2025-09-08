@@ -14,7 +14,7 @@ class ProjectsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const RoundedCard(text: AppStrings.work),
+        const RoundedCard(text: AppStrings.projects),
         const SizedBox(height: AppValues.paddingMedium),
 
         Text(

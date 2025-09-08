@@ -32,7 +32,7 @@ class ContactSection extends StatelessWidget {
             const SizedBox(width: AppValues.paddingSmall),
             SelectableText(
               AppStrings.email,
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             IconButton(
               onPressed: () async {
@@ -52,7 +52,7 @@ class ContactSection extends StatelessWidget {
             const SizedBox(width: AppValues.paddingSmall),
             SelectableText(
               AppStrings.phoneNumber,
-              style: Theme.of(context).textTheme.headlineSmall,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             IconButton(
               onPressed: () async {
@@ -83,10 +83,7 @@ class ContactSection extends StatelessWidget {
               },
               icon: SvgPicture.asset(
                 AppIcons.github,
-                colorFilter: ColorFilter.mode(
-                  AppColors.grey500,
-                  BlendMode.srcIn,
-                ),
+                colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
               ),
             ),
             IconButton(
@@ -102,10 +99,7 @@ class ContactSection extends StatelessWidget {
               },
               icon: SvgPicture.asset(
                 AppIcons.linkedin,
-                colorFilter: ColorFilter.mode(
-                  AppColors.grey500,
-                  BlendMode.srcIn,
-                ),
+                colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
               ),
             ),
           ],

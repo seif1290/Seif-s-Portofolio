@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:seif_portofolio/core/constants/app_strings.dart';
 import 'package:seif_portofolio/core/constants/app_values.dart';
 import 'package:seif_portofolio/core/constants/desktop_app_bar_actions.dart';
+import 'package:seif_portofolio/presentation/widgets/drawer_section_row.dart';
 
 class MobileDrawer extends StatelessWidget {
-  const MobileDrawer({super.key});
-
+  const MobileDrawer({super.key, required this.onDrawerSectionRowTap});
+  final Function(int index) onDrawerSectionRowTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +27,16 @@ class MobileDrawer extends StatelessWidget {
 
         body: Column(
           spacing: AppValues.paddingHorizontalMobile,
-          children: desktopAppBarActions,
+          children: List.generate(
+            desktopAppBarActions.length,
+            (index) => DrawerSectionRow(
+              text: desktopAppBarActions[index],
+              icon: desktopAppBarActionsIcons[index],
+              onTap: () {
+                onDrawerSectionRowTap(index);
+              },
+            ),
+          ),
         ),
       ),
     );
