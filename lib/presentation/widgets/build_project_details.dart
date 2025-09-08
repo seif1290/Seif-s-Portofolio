@@ -38,7 +38,7 @@ class BuildProjectDetails extends StatelessWidget {
           const SizedBox(height: 24.0),
           IconButton(
             onPressed: () async {
-              if (!await launchUrl(url)) {
+              if (!await launchUrl(url) && !context.mounted) {
                 ScaffoldMessenger.of(
                   context,
                 ).showSnackBar(SnackBar(content: Text('csddcs')));

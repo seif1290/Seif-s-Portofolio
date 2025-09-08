@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seif_portofolio/core/constants/app_values.dart';
+import 'package:seif_portofolio/core/ui/app_colors.dart';
 import 'package:seif_portofolio/presentation/widgets/rounded_card.dart';
 
 class EducationSection extends StatelessWidget {
@@ -55,9 +56,10 @@ class _EducationItem extends StatelessWidget {
         children: [
           Text(
             institution,
-            style: Theme.of(
-              context,
-            ).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+              color: AppColors.white,
+              fontWeight: FontWeight.w500,
+            ),
           ),
           const SizedBox(height: 8.0),
           Text(
@@ -65,7 +67,7 @@ class _EducationItem extends StatelessWidget {
             style: Theme.of(context).textTheme.labelLarge,
           ),
           const SizedBox(height: 12.0),
-          Text(description, style: Theme.of(context).textTheme.bodyMedium),
+          Text(description, style: Theme.of(context).textTheme.labelLarge),
         ],
       ),
     );

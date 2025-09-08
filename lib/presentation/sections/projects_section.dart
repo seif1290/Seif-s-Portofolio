@@ -7,8 +7,8 @@ import 'package:seif_portofolio/presentation/widgets/build_project_card_desktop.
 import 'package:seif_portofolio/presentation/widgets/build_project_card_mobile.dart';
 import 'package:seif_portofolio/presentation/widgets/rounded_card.dart';
 
-class WorkSection extends StatelessWidget {
-  const WorkSection({super.key, required this.projects});
+class ProjectsSection extends StatelessWidget {
+  const ProjectsSection({super.key, required this.projects});
   final List<ProjectModel> projects;
   @override
   Widget build(BuildContext context) {

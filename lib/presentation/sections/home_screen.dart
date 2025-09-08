@@ -11,7 +11,7 @@ import 'package:seif_portofolio/presentation/sections/introduction_section/intro
 import 'package:seif_portofolio/presentation/sections/main_section/main_section_desktop.dart';
 import 'package:seif_portofolio/presentation/sections/main_section/main_section_mobile.dart';
 import 'package:seif_portofolio/presentation/sections/skills_section.dart';
-import 'package:seif_portofolio/presentation/sections/work_section.dart';
+import 'package:seif_portofolio/presentation/sections/projects_section.dart';
 import 'package:seif_portofolio/presentation/widgets/mobile_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -69,7 +69,9 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.secondary,
-                child: WorkSection(projects: ProjectsDataSource.getProjects),
+                child: ProjectsSection(
+                  projects: ProjectsDataSource.getProjects,
+                ),
               ),
               Container(
                 width: double.infinity,
