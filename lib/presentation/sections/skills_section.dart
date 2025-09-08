@@ -14,7 +14,7 @@ class SkillsSection extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        RoundedCard(text: AppStrings.skills),
+        const RoundedCard(text: AppStrings.skills),
         const SizedBox(height: AppValues.paddingMedium),
 
         Text(

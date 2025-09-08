@@ -1,5 +1,12 @@
 abstract class AppStrings {
+  static const String email = 'elnawawyseif@gmail.com';
+  static const String phoneNumber = '01027045365';
+  static const String linkedinProfileLink =
+      'https://www.linkedin.com/in/seifelnawawy';
+  static const String githubProfileLink = 'https://github.com/seif1290';
+
   static const String contact = 'Contact';
+  static const String getInTouch = 'Get In Touch';
   static const String projects = 'Projects';
   static const String skills = 'Skills';
   static const String work = 'Work';
@@ -19,4 +26,10 @@ abstract class AppStrings {
 
   static const String noteworthyProjects =
       'Some of the noteworthy projects I have built:';
+
+  static const String reachOutToMe =
+      "What's next? Feel free to reach out to me if you're looking for a developer, "
+      "have a query, or simply want to connect.";
+  static const String findMeInThesePlatforms =
+      'You may also find me on these platforms!';
 }

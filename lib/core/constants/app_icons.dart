@@ -9,7 +9,6 @@ abstract class AppIcons {
   static const String dataStructures = 'assets/icons/data_structures_logo.png';
   static const String firebase = 'assets/icons/firebase-original.svg';
   static const String git = 'assets/icons/git_logo.png';
-  static const String github = 'assets/icons/github-original.svg';
   static const String hive = 'assets/icons/hive_logo.jpeg';
   static const String kotlin = 'assets/icons/kotlin-original.svg';
   static const String mvvm = 'assets/icons/mvvm-logo.png';
@@ -21,4 +20,6 @@ abstract class AppIcons {
   static const String vsCode = 'assets/icons/vs_code_logo.png';
   static const String algorithms = 'assets/icons/algorithms_logo.png';
   static const String jetpackCompose = 'assets/icons/jetpack_compose_logo.png';
+  static const String github = 'assets/icons/github.svg';
+  static const String linkedin = 'assets/icons/linkedin.svg';
 }

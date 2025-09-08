@@ -5,6 +5,7 @@ import 'package:seif_portofolio/core/constants/desktop_app_bar_actions.dart';
 import 'package:seif_portofolio/core/ui/responsive_layout.dart';
 import 'package:seif_portofolio/data/data_source/projects_data_source.dart';
 import 'package:seif_portofolio/data/data_source/skills_data_source.dart';
+import 'package:seif_portofolio/presentation/sections/contacts_section.dart';
 import 'package:seif_portofolio/presentation/sections/educatino_section.dart';
 import 'package:seif_portofolio/presentation/sections/introduction_section/introduction_section_desktop.dart';
 import 'package:seif_portofolio/presentation/sections/introduction_section/introduction_section_mobile.dart';
@@ -78,6 +79,12 @@ class HomeScreen extends StatelessWidget {
                 padding: _screenMainPadding(),
                 color: Theme.of(context).colorScheme.primary,
                 child: EducationSection(),
+              ),
+              Container(
+                width: double.infinity,
+                padding: _screenMainPadding(),
+                color: Theme.of(context).colorScheme.secondary,
+                child: ContactSection(),
               ),
             ],
           ),

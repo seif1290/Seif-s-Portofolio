@@ -67,7 +67,7 @@ class _EducationItem extends StatelessWidget {
             style: Theme.of(context).textTheme.labelLarge,
           ),
           const SizedBox(height: 12.0),
-          Text(description, style: Theme.of(context).textTheme.labelLarge),
+          Text(description, style: Theme.of(context).textTheme.labelMedium),
         ],
       ),
     );
